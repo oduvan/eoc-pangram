@@ -1,0 +1,49 @@
+<p>
+    Панграмма (Греческий:παν γράμμα, pan gramma, "каждая буква") 
+    или предложение состоящее из разных букв алфавита, 
+    используя каждую букву по крайней мере один раз. 
+    Возможно, вы знакомы с хорошо известными панграммами 
+    "Эй, жлоб! Где туз? Прячь юных съёмщиц в шкаф" или "Любя, съешь щипцы, — вздохнёт мэр, — кайф жгуч".
+</p>
+<p>
+    Для этого задания, вы будете использовать латинский алфавит (A-Z). У вас есть текст с латинскими буквами и знаками препинания. Вы должны проверить является ли предложение панграммой или нет. Регистр не имеет значения.
+</p>
+
+
+<p>
+    <strong>Входные данные: </strong> Текст как строка.
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> Является предложение панграммой или нет как логическое.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Примеры:</strong>
+    </p>
+    {% if interpreter.slug == "js-node" %}
+<pre class="brush: python">checkPangram("The quick brown fox jumps over the lazy dog.") == true
+checkPangram("ABCDEF.") == false</pre>
+{% else %}
+<pre class="brush: python">check_pangram("The quick brown fox jumps over the lazy dog.") == True
+check_pangram("ABCDEF.") == False</pre>
+{% endif %}
+</div>
+
+<p class="for_info_only">
+    <strong>Как это используется: </strong>
+    Панграммы используют для отображения шрифтов, тестирования оборудования, развития почерка, каллиграфии и набора текста на клавиатуре. 
+</p>
+
+<p>
+    <strong>Предусловия:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+All ASCII English Letter(a-z,A-Z) and punctuations such as:
+<pre>!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~</pre>
+{% else %}
+<pre class="brush: python">all(ch in (string.punctuation + string.ascii_letters + " ") for ch in text)
+0 < len(text)</pre>
+{% endif %}

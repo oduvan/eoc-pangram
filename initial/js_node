@@ -1,0 +1,19 @@
+"use strict";
+
+const ALPHABET = "abcdefghijklmnopqrstuvwxyz".split("");
+
+function checkPangram(text){
+    // is the given text is a pangram.
+
+    // your code here
+    return true;
+}
+
+var assert = require('assert');
+
+if (!global.is_checking) {
+    assert.equal(checkPangram("The quick brown fox jumps over the lazy dog."), true, "brown fox");
+    assert.equal(checkPangram("ABCDEF"), false, "ABC");
+    assert.equal(checkPangram("Bored? Craving a pub quiz fix? Why, just come to the Royal Oak!"), true, "Bored?");
+    console.log("If it is done - it is Done. Go Check is NOW!");
+}
