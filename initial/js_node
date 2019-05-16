@@ -1,5 +1,5 @@
 
-const ALPHABET: string = "abcdefghijklmnopqrstuvwxyz".split("");
+const ALPHABET: string[] = "abcdefghijklmnopqrstuvwxyz".split("");
 
 export function checkPangram(text: string): boolean{
     // your code here
